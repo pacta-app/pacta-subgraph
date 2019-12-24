@@ -1,0 +1,12 @@
+specVersion: 0.0.1
+description: Pacta subgraph
+repository: https://github.com/pacta-app/pacta-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Pacta
+    network: ropsten
+    source:
+      address: "0x3729E05CE6f6dd7FBfC3Caaf09Bea976EEf8AcEC"
+      abi: Pacta
