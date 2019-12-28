@@ -1,0 +1,4 @@
+type Organisation @entity {
+  id: ID!               # The namehash of the name
+  name: String          # The name of the organisation
+}
