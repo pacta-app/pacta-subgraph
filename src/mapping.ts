@@ -1,6 +1,6 @@
 import { BigInt } from "@graphprotocol/graph-ts"
 import {
-  Contract,
+  Pacta,
   newAssociation,
   feePaid,
   ownedPaymentReceived,

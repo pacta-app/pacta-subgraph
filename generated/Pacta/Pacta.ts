@@ -107,9 +107,9 @@ export class ownedFallback__Params {
   }
 }
 
-export class Contract extends SmartContract {
-  static bind(address: Address): Contract {
-    return new Contract("Contract", address);
+export class Pacta extends SmartContract {
+  static bind(address: Address): Pacta {
+    return new Pacta("Pacta", address);
   }
 
   creationDate(): BigInt {

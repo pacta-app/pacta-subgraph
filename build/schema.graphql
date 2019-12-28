@@ -1,0 +1,6 @@
+type Organisation @entity {
+  id: ID!
+  count: BigInt!
+  name: String! # string
+  association: Bytes! # address
+}

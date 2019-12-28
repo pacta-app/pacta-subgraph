@@ -1,0 +1,32 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Pacta
+    network: ropsten
+    source:
+      address: "0x3729E05CE6f6dd7FBfC3Caaf09Bea976EEf8AcEC"
+      abi: Pacta
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - newAssociation
+        - feePaid
+        - ownedPaymentReceived
+        - ownedFallback
+      abis:
+        - name: Pacta
+          file: Pacta\abis\Pacta.json
+      eventHandlers:
+        - event: newAssociation(string,address,address,address)
+          handler: handlenewAssociation
+        - event: feePaid(address,uint256)
+          handler: handlefeePaid
+        - event: ownedPaymentReceived(address,uint256)
+          handler: handleownedPaymentReceived
+        - event: ownedFallback(address)
+          handler: handleownedFallback
+      file: Pacta\Pacta.wasm
