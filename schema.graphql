@@ -1,4 +1,5 @@
 type Organisation @entity {
   id: ID!               # The namehash of the name
+  address: Bytes        # The address
   name: String          # The name of the organisation
 }
