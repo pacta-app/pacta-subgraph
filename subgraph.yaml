@@ -15,7 +15,7 @@ dataSources:
       apiVersion: 0.0.3
       language: wasm/assemblyscript
       entities:
-        - Pacta
+        - Organisation
       abis:
         - name: Pacta
           file: ./abis/Pacta.json
