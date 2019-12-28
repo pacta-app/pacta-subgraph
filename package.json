@@ -1,0 +1,16 @@
+{
+  "name": "pacta-subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pacta-app/pacta-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ pacta-app/pacta-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ pacta-app/pacta-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 pacta-app/pacta-subgraph"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.17.1",
+    "@graphprotocol/graph-ts": "0.17.0"
+  }
+}

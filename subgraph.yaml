@@ -1,6 +1,4 @@
-specVersion: 0.0.1
-description: Pacta subgraph
-repository: https://github.com/pacta-app/pacta-subgraph
+specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
@@ -15,11 +13,20 @@ dataSources:
       apiVersion: 0.0.3
       language: wasm/assemblyscript
       entities:
-        - Organisation
+        - newAssociation
+        - feePaid
+        - ownedPaymentReceived
+        - ownedFallback
       abis:
         - name: Pacta
           file: ./abis/Pacta.json
       eventHandlers:
         - event: newAssociation(string,address,address,address)
-          handler: handleNewAssociation
+          handler: handlenewAssociation
+        - event: feePaid(address,uint256)
+          handler: handlefeePaid
+        - event: ownedPaymentReceived(address,uint256)
+          handler: handleownedPaymentReceived
+        - event: ownedFallback(address)
+          handler: handleownedFallback
       file: ./src/mapping.ts
